@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View ,Image} from "react-native";
 
-const Header = () => {
+const Content = () => {
   return (
       <View>
           <View style={styles.boxStyle}>
@@ -114,4 +114,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Header;
+export default Content;
