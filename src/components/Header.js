@@ -1,12 +1,23 @@
 import React from "react";
-import { StyleSheet, Text, View ,Image} from "react-native";
+import { StyleSheet, Text, View ,Image, TouchableOpacity} from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
 
-const Header = () => {
+const Header = ({navigation}) => {
   return (
       <View style={styles.headerStyle}>
-        <Image
-            style = {styles.NavbarBtnStyle}
-            source = {require('../img/btn_navbar_mobile.png')}/>
+        <TouchableOpacity
+          onPress={() => navigation.openDrawer()}
+        >
+          <Image
+              style = {styles.NavbarBtnStyle}
+              source = {require('../img/btn_navbar_mobile.png')}/> 
+        </TouchableOpacity>
         <Text style={styles.textStyle}>My Book</Text>
         <Image 
             style = {styles.NavbarBtnStyle} 
