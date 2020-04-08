@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { navigationRef } from './RootNavigation';
-// import { createDrawerNavigator } from '@react-navigation/drawer';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -11,10 +10,8 @@ import {
 } from '@react-navigation/drawer';
 
 import BookScreen from './src/screens/BookScreen';
-import BurgerScreen from './src/screens/BurgerScreen';
-import { StyleSheet,Image,TouchableOpacity,Text, View} from 'react-native';
+import { StyleSheet,Image,Text, View} from 'react-native';
 
-const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function CustomDrawerContent(props) {
@@ -75,11 +72,6 @@ function CustomDrawerContent(props) {
 
 export default function App() {
   return (
-    // <NavigationContainer ref={navigationRef}>
-    //   <Drawer.Navigator style={styles.DrawerStyle}>
-    //     <Drawer.Screen name="MyBook" component={BookScreen} />
-    //   </Drawer.Navigator>
-    // </NavigationContainer>
     <NavigationContainer>
       <Drawer.Navigator 
         initialRouteName="My Book"
@@ -98,7 +90,7 @@ export default function App() {
       >
         <Drawer.Screen
           name="Home" 
-          component={BurgerScreen} 
+          component={BookScreen} 
           options={{ 
             // drawerLabel: 'Home',
             drawerIcon: ({})=>(

@@ -1,12 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View ,Image, TouchableOpacity} from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
-} from '@react-navigation/drawer';
 
 const Header = ({navigation}) => {
   return (
